@@ -12,14 +12,14 @@ import {
 
 const MagneticSensor = registerPlugin('MagneticSensor');
 
-const TEST_BANNER =
+const PROD_BANNER =
   'ca-app-pub-8854680295966508/1373673215';
 
-const TEST_INTERSTITIAL =
+const PROD_INTERSTITIAL =
   'ca-app-pub-8854680295966508/7552813613';
 
 /*
-PRODUCCIÓN - NO USADOS DURANTE LAS PRUEBAS
+IDS DE PRODUCCIÓN
 
 APP:
 ca-app-pub-8854680295966508~9040410248
@@ -243,7 +243,7 @@ async function prepareInterstitial() {
   try {
 
     await AdMob.prepareInterstitial({
-      adId: TEST_INTERSTITIAL
+      adId: PROD_INTERSTITIAL
     });
 
     interstitialReady = true;
@@ -263,7 +263,7 @@ calibrateBtn.addEventListener(
       try {
 
         await AdMob.showInterstitial({
-          adId: TEST_INTERSTITIAL
+          adId: PROD_INTERSTITIAL
         });
 
       } catch {}
@@ -322,7 +322,7 @@ async function startAds() {
     adsReady = true;
 
     await AdMob.showBanner({
-      adId: TEST_BANNER,
+      adId: PROD_BANNER,
       adSize: BannerAdSize.ADAPTIVE_BANNER,
       position: BannerAdPosition.BOTTOM_CENTER,
       margin: 0

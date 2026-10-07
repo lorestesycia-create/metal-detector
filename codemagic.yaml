@@ -1,6 +1,6 @@
 workflows:
-  metal-detector-debug:
-    name: Metal Detector Android Debug
+  metal-detector-release:
+    name: Metal Detector Android Release
     max_build_duration: 30
 
     environment:
