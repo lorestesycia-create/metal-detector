@@ -28,6 +28,7 @@ workflows:
           cd android
           chmod +x gradlew
           ./gradlew bundleRelease
+          jarsigner -verify -verbose -certs app/build/outputs/bundle/release/app-release.aab
 
     artifacts:
       - android/app/build/outputs/bundle/release/app-release.aab
