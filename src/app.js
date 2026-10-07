@@ -13,10 +13,10 @@ import {
 const MagneticSensor = registerPlugin('MagneticSensor');
 
 const TEST_BANNER =
-  'ca-app-pub-3940256099942544/6300978111';
+  'ca-app-pub-8854680295966508/1373673215';
 
 const TEST_INTERSTITIAL =
-  'ca-app-pub-3940256099942544/1033173712';
+  'ca-app-pub-8854680295966508/7552813613';
 
 /*
 PRODUCCIÓN - NO USADOS DURANTE LAS PRUEBAS
