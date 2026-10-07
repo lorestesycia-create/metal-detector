@@ -1,0 +1,31 @@
+workflows:
+  metal-detector-debug:
+    name: Metal Detector Android Debug
+    max_build_duration: 30
+
+    environment:
+      java: 21
+      node: 20
+
+    scripts:
+
+      - name: Install dependencies
+        script: |
+          npm install --include=dev --registry=https://registry.npmjs.org/
+
+      - name: Build web
+        script: |
+          npm run build:web
+
+      - name: Sync Capacitor
+        script: |
+          node node_modules/@capacitor/cli/bin/capacitor sync android
+
+      - name: Build debug APK
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+    artifacts:
+      - android/app/build/outputs/apk/debug/app-debug.apk

@@ -1,0 +1,18 @@
+{
+  "name": "metal-detector",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:web": "esbuild src/app.js --bundle --format=iife --outfile=www/app.js",
+    "sync": "npm run build:web && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor-community/admob": "7.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/cli": "^7.6.9",
+    "@capacitor/core": "^7.6.9",
+    "esbuild": "0.28.2"
+  }
+}

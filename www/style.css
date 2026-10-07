@@ -1,0 +1,177 @@
+*{
+ box-sizing:border-box;
+ -webkit-tap-highlight-color:transparent
+}
+
+html,body{
+ margin:0;
+ width:100%;
+ min-height:100%;
+ background:#06101a;
+ color:white;
+ font-family:Arial,sans-serif
+}
+
+body{
+ min-height:100vh
+}
+
+.app{
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ background:
+ radial-gradient(circle at 50% 35%,#183249 0,#091725 45%,#050b11 100%);
+ padding-top:env(safe-area-inset-top)
+}
+
+header{
+ text-align:center;
+ padding:26px 20px 0
+}
+
+h1{
+ margin:0;
+ font-size:25px;
+ letter-spacing:3px
+}
+
+.mode{
+ display:inline-block;
+ margin-top:10px;
+ padding:7px 15px;
+ border:1px solid #416079;
+ border-radius:20px;
+ color:#b3c9d8;
+ font-size:12px;
+ letter-spacing:1.4px
+}
+
+.detector{
+ flex:1;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ padding:10px 22px
+}
+
+.gauge{
+ width:min(90vw,400px);
+ position:relative
+}
+
+.gauge svg{
+ display:block;
+ width:100%
+}
+
+.needle{
+ position:absolute;
+ width:39%;
+ height:4px;
+ left:50%;
+ bottom:14%;
+ border-radius:5px;
+ background:#fff;
+ transform-origin:left center;
+ transform:rotate(-80deg);
+ transition:transform .12s linear;
+ box-shadow:0 0 10px rgba(255,255,255,.65)
+}
+
+.pivot{
+ position:absolute;
+ left:calc(50% - 12px);
+ bottom:calc(14% - 10px);
+ width:24px;
+ height:24px;
+ border-radius:50%;
+ background:#dce9f2;
+ box-shadow:0 0 12px #fff6
+}
+
+.reading{
+ display:flex;
+ align-items:baseline;
+ gap:7px;
+ margin-top:-8px
+}
+
+#value{
+ font-size:62px;
+ font-weight:800
+}
+
+.reading small{
+ font-size:20px;
+ color:#a9bdca
+}
+
+.status{
+ margin-top:12px;
+ color:#4ddd91;
+ font-weight:800;
+ letter-spacing:2px
+}
+
+.controls{
+ padding:5px 22px 16px;
+ text-align:center
+}
+
+button{
+ font:inherit;
+ cursor:pointer
+}
+
+.sound{
+ padding:11px 15px;
+ border:1px solid #3d5b72;
+ border-radius:12px;
+ background:#0b1c29;
+ color:#d4e2eb;
+ margin-bottom:13px
+}
+
+.calibrate{
+ width:100%;
+ max-width:430px;
+ padding:18px;
+ border:0;
+ border-radius:15px;
+ color:#fff;
+ background:linear-gradient(135deg,#128bd5,#326ee5);
+ font-size:16px;
+ font-weight:800;
+ letter-spacing:.6px;
+ box-shadow:0 8px 25px #147bc833
+}
+
+.calibrate:disabled{
+ opacity:.65
+}
+
+#info{
+ margin:13px 0 5px;
+ color:#839aa9;
+ font-size:12px
+}
+
+.privacy{
+ border:0;
+ background:transparent;
+ color:#91aec1;
+ text-decoration:underline;
+ font-size:12px;
+ padding:8px
+}
+
+.hidden{
+ display:none
+}
+
+.ad-space{
+ height:65px;
+ flex-shrink:0
+}
