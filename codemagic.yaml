@@ -6,6 +6,8 @@ workflows:
     environment:
       java: 21
       node: 20
+      android_signing:
+        - metal_detector
 
     scripts:
 
